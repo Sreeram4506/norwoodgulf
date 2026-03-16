@@ -636,17 +636,15 @@ function initNvidiaChatbot() {
   }
 
   function toggleChat() {
-    console.log('Toggle chat called, current state:', isOpen);
     isOpen = !isOpen;
     chatWindow.classList.toggle('open');
-    console.log('Chat window toggled, new state:', isOpen);
+    document.body.classList.toggle('chat-open');
   }
 
   function closeChat() {
-    console.log('Close chat called');
     isOpen = false;
     chatWindow.classList.remove('open');
-    console.log('Chat window closed');
+    document.body.classList.remove('chat-open');
   }
 
   function addMessage(message, isUser = false, isTyping = false) {
