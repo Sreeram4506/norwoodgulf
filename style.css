@@ -527,13 +527,6 @@ button, input, textarea, select {
   padding-bottom: var(--sp-4);
   border-bottom: 1px solid rgba(255,255,255,0.15);
 }
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--white-pure);
-  padding-bottom: var(--sp-2);
-  margin-bottom: var(--sp-2);
-  border-bottom: 1px solid rgba(255,255,255,0.15);
-}
 
 .nav-mobile-brand img {
   height: 34px;
@@ -3465,49 +3458,53 @@ button, input, textarea, select {
 }
 
 /* =====================================================
-   NVIDIA CHATBOT
+   NVIDIA CHATBOT — BRANDED THEME
    ===================================================== */
 .nvidia-chatbot {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, #76b900 0%, #5e35b1 100%);
+  bottom: 30px;
+  right: 30px;
+  width: 65px;
+  height: 65px;
+  background: var(--gradient-primary);
   border-radius: 50%;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  box-shadow: var(--shadow-orange);
   cursor: pointer;
   z-index: 1000;
-  transition: all var(--ease);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 4px solid var(--white-pure);
 }
 
 .nvidia-chatbot:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 25px rgba(0,0,0,0.4);
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: var(--shadow-glow);
 }
 
 .nvidia-chatbot svg {
-  width: 24px;
-  height: 24px;
-  fill: white;
+  width: 28px;
+  height: 28px;
+  stroke: white;
+  stroke-width: 2.5;
 }
 
 .nvidia-chat-window {
   position: fixed;
-  bottom: 90px;
-  right: 20px;
-  width: 350px;
-  height: 500px;
-  background: white;
-  border-radius: var(--radius-lg);
-  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  bottom: 110px;
+  right: 30px;
+  width: 380px;
+  height: 550px;
+  background: var(--white-pure);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
   z-index: 1001;
   display: none;
   flex-direction: column;
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-soft);
+  overflow: hidden;
+  animation: scale-in 0.3s ease-out;
 }
 
 .nvidia-chat-window.open {
@@ -3515,76 +3512,99 @@ button, input, textarea, select {
 }
 
 .nvidia-chat-header {
-  background: linear-gradient(135deg, #76b900 0%, #5e35b1 100%);
+  background: var(--gradient-blue);
   color: white;
-  padding: var(--sp-3) var(--sp-4);
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  padding: var(--sp-4);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+}
+
+.nvidia-chat-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--primary-orange);
 }
 
 .nvidia-chat-title {
   font-family: var(--font-display);
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .nvidia-chat-close {
-  background: rgba(255,255,255,0.2);
-  border: none;
-  width: 24px;
-  height: 24px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background var(--ease);
+  transition: all var(--ease);
+  color: white;
 }
 
 .nvidia-chat-close:hover {
-  background: rgba(255,255,255,0.3);
+  background: var(--primary-orange);
+  border-color: var(--primary-orange);
+  transform: rotate(90deg);
 }
 
 .nvidia-chat-close svg {
-  width: 12px;
-  height: 12px;
-  fill: white;
+  width: 14px;
+  height: 14px;
 }
 
 .nvidia-chat-messages {
   flex: 1;
   padding: var(--sp-4);
   overflow-y: auto;
-  max-height: 350px;
+  background: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
 }
 
 .nvidia-chat-message {
-  margin-bottom: var(--sp-3);
-  padding: var(--sp-3);
-  border-radius: var(--radius-md);
-  background: var(--light-gray);
+  padding: var(--sp-3) var(--sp-4);
+  border-radius: var(--radius-lg);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  max-width: 85%;
+  position: relative;
 }
 
 .nvidia-chat-message.user {
   background: var(--primary-blue);
   color: white;
-  margin-left: auto;
-  max-width: 80%;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+  box-shadow: 0 4px 12px rgba(13, 59, 128, 0.15);
 }
 
 .nvidia-chat-message.bot {
-  background: var(--white-pure);
-  color: var(--text-dark);
-  border: 1px solid var(--border);
+  background: white;
+  color: var(--color-dark);
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+  border: 1px solid rgba(13, 59, 128, 0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 .typing-indicator {
-  color: var(--muted-dark);
-  font-style: italic;
+  color: var(--primary-blue-500);
+  font-weight: 600;
   font-size: 0.85rem;
-  opacity: 0.7;
+  margin-left: var(--sp-1);
 }
 
 .typing-indicator span {
@@ -3599,32 +3619,46 @@ button, input, textarea, select {
 
 .nvidia-chat-input {
   padding: var(--sp-4);
-  border-top: 1px solid var(--border);
+  background: white;
+  border-top: 1px solid var(--gray-100);
   display: flex;
   gap: var(--sp-2);
 }
 
 .nvidia-chat-input input {
   flex: 1;
-  padding: var(--sp-2);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  font-size: 0.9rem;
+  padding: var(--sp-2) var(--sp-4);
+  border: 2px solid var(--gray-100);
+  border-radius: var(--radius-full);
+  font-size: 1rem;
+  font-family: var(--font-body);
+  transition: border-color 0.3s ease;
+}
+
+.nvidia-chat-input input:focus {
+  outline: none;
+  border-color: var(--primary-blue-300);
 }
 
 .nvidia-chat-input button {
   background: var(--primary-blue);
   color: white;
   border: none;
-  padding: var(--sp-2) var(--sp-3);
-  border-radius: var(--radius-md);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
   cursor: pointer;
-  font-weight: 600;
-  transition: background var(--ease);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-md);
 }
 
 .nvidia-chat-input button:hover {
-  background: var(--navy);
+  background: var(--primary-orange);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-orange);
 }
 
 /* Mobile chatbot styles */
@@ -3663,6 +3697,8 @@ button, input, textarea, select {
     bottom: 60px;
   }
 }
+/* =====================================================
+   MOBILE RESPONSIVENESS
    ===================================================== */
 @media (max-width: 480px) {
   .container { padding: 0 var(--sp-2); }
