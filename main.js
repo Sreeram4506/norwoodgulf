@@ -175,6 +175,7 @@ function initNavbar() {
     hamburger.classList.add('open');
     mobileNav.classList.add('open');
     overlay.classList.add('open');
+    document.body.classList.add('nav-open');
     document.body.style.overflow = 'hidden';
   }
 
@@ -182,6 +183,7 @@ function initNavbar() {
     hamburger.classList.remove('open');
     mobileNav.classList.remove('open');
     overlay.classList.remove('open');
+    document.body.classList.remove('nav-open');
     document.body.style.overflow = '';
   }
 
