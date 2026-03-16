@@ -10,14 +10,14 @@
   5. Replace the placeholder values below with your actual credentials
 */
 window.NORWOOD_EMAILJS_CONFIG = {
-  publicKey: '3w4ojC5FPOWMS6pvY',
+  publicKey: 'fWMjUb3nyc5iqIdCq',
   appointment: {
-    serviceId: 'service_pup4f9u',
-    templateId: 'template_1tn32jp'
+    serviceId: 'service_2wvqqwi',
+    templateId: 'template_af8yxnw'
   },
   contact: {
-    serviceId: 'service_0rinvpw',
-    templateId: 'template_1tn32jp'
+    serviceId: 'service_0mqrnkb',
+    templateId: 'template_n8y37fa'
   }
 };
 
