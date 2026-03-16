@@ -38,11 +38,10 @@ function getEmailJsConfig(formType) {
 // Test function to verify configuration is loaded
 function testEmailJsConfig() {
   console.log('=== EmailJS Configuration Test ===');
-  
-  // Check if config object exists
-  if (typeof window.NORWOOD_EMAILJS_CONFIG === 'undefined') {
-    console.error('EmailJS config object not found');
-    return;
+  const config = window.EMAILJS_CONFIG;
+  if (!config) {
+    console.warn('EmailJS config not found on window object, ensuring initialization...');
+    return false;
   }
   
   console.log('Window NORWOOD_EMAILJS_CONFIG:', window.NORWOOD_EMAILJS_CONFIG);
@@ -763,12 +762,23 @@ function initNvidiaChatbot() {
       hideTypingIndicator();
       console.error('NVIDIA API Error:', error);
       
-      // Intelligent Error Message
-      let errorMsg = "I'm having a bit of trouble connecting to my brain right now. Please call us directly at (781) 255-7368 for immediate assistance!";
-      if (window.location.protocol === 'file:') {
-        errorMsg = "Browser security blocks AI connections when opening files directly from a folder. To see me in full action, please host the site on a web server or use a local development server like Live Server.";
+      // FALLBACK TO LOCAL INTELLIGENCE ON ERROR (CORS, NETWORK, ETC)
+      const input = userMessage.toLowerCase();
+      let response = "";
+      
+      if (input.includes('hour') || input.includes('open') || input.includes('close')) {
+        response = "Norwood Gulf Auto Care is open Monday through Friday from 7:00 AM to 6:00 PM, and Saturdays from 7:00 AM to 3:00 PM. Service is closed on Sundays.";
+      } else if (input.includes('service') || input.includes('repair') || input.includes('fix')) {
+        response = "We provide expert engine diagnostics, brake repair, oil changes, transmission service, tire services, and more. How can we help you today?";
+      } else if (input.includes('location') || input.includes('address') || input.includes('where')) {
+        response = "You can find us at 707 Neponset Street, Norwood, MA 02062.";
+      } else if (input.includes('phone') || input.includes('call') || input.includes('contact')) {
+        response = "Please reach out to us at (781) 255-7368 for any immediate needs!";
+      } else {
+        response = "I'm currently in 'High-Security Mode' and having trouble connecting to my central brain. For any questions about services or appointments, please call us at (781) 255-7368!";
       }
-      addMessage(errorMsg, false);
+      
+      addMessage(response, false);
     }
   }
 
