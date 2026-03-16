@@ -602,7 +602,7 @@ function initNvidiaChatbot() {
   }
 
   let isOpen = false;
-  const nvidiaApiKey = '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';
+  const nvidiaApiKey = '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';
 
   console.log('NVIDIA API key loaded:', nvidiaApiKey ? 'Key present' : 'Key missing');
 
