@@ -608,37 +608,23 @@ function initNvidiaChatbot() {
 
   console.log('NVIDIA API key loaded:', nvidiaApiKey ? 'Key present' : 'Key missing');
 
-  // Test function to verify chatbot is working
-  function testChatbot() {
-    console.log('=== Testing Chatbot Functionality ===');
-    
-    // Test 1: Check if all elements exist
-    const elementsExist = chatbot && chatWindow && chatClose && chatInput && chatSend && chatMessages;
-    console.log('All chatbot elements exist:', elementsExist);
-    
-    // Test 2: Try to add a test message
-    if (elementsExist) {
-      console.log('Adding test message...');
-      addMessage('Test message from chatbot - this should appear!', false);
-      
-      // Test 3: Check if message was added
-      setTimeout(() => {
-        const testMessage = chatMessages.querySelector('.nvidia-chat-message:last-child');
-        if (testMessage) {
-          console.log('✅ Test message successfully added!');
-        } else {
-          console.log('❌ Test message failed to add');
-        }
-      }, 1000);
-    }
-    
-    console.log('=== Chatbot Test Complete ===');
+  let hasWelcomed = false;
+
+  function sendWelcomeMessage() {
+    if (hasWelcomed) return;
+    hasWelcomed = true;
+    setTimeout(() => {
+      addMessage("Hello! I'm your AI assistant. How can I help you with your auto service needs today?", false);
+    }, 500);
   }
 
   function toggleChat() {
     isOpen = !isOpen;
     chatWindow.classList.toggle('open');
     document.body.classList.toggle('chat-open');
+    if (isOpen) {
+      sendWelcomeMessage();
+    }
   }
 
   function closeChat() {
@@ -817,8 +803,6 @@ function initNvidiaChatbot() {
   
   console.log('Event listeners setup complete');
   
-  // Run test function
-  testChatbot();
 }
 
 /**
