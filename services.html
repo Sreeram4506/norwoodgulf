@@ -79,9 +79,98 @@
         </div>
 
         <div class="services-categories" aria-label="Service categories">
+
+          <!-- STATE INSPECTION -->
+          <div class="service-category reveal">
+            <div class="category-header" onclick="toggleServiceCategory(this)" style="cursor: pointer;">
+              <div class="category-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9S3 16.97 3 12 7.03 3 12 3s9 4.03 9 9z"/></svg>
+              </div>
+              <h3 class="category-title">State Inspection</h3>
+              <div class="category-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </div>
+            <div class="services-list" style="display: none;">
+              <div class="service-item">
+                <h4 class="service-name">Massachusetts State Inspection</h4>
+                <p class="service-desc">Official state inspection service for safety and emissions compliance with efficient check-in and reporting.</p>
+              </div>
+              <div class="service-item">
+                <h4 class="service-name">Inspection Sticker Renewals</h4>
+                <p class="service-desc">Fast inspection appointments to help keep your registration current and your vehicle road-ready.</p>
+              </div>
+              <div class="service-item">
+                <h4 class="service-name">Safety &amp; Emissions Checks</h4>
+                <p class="service-desc">Thorough inspections to verify key systems and identify issues before they turn into larger repairs.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- MAINTENANCE & GENERAL SERVICES -->
+          <div class="service-category reveal reveal-delay-1">
+            <div class="category-header" onclick="toggleServiceCategory(this)" style="cursor: pointer;">
+              <div class="category-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v6m4.22-13.22l4.24 4.24M1.54 1.54l4.24 4.24M20.46 20.46l-4.24-4.24M1.54 20.46l4.24-4.24"/></svg>
+              </div>
+              <h3 class="category-title">Maintenance &amp; General Services</h3>
+              <div class="category-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </div>
+            <div class="services-list" style="display: none;">
+              <div class="service-item">
+                <h4 class="service-name">General Auto Maintenance</h4>
+                <p class="service-desc">Complete maintenance services to keep your vehicle running smoothly and reliably every day.</p>
+              </div>
+              <div class="service-item">
+                <h4 class="service-name">Oil Change</h4>
+                <p class="service-desc">Professional oil changes with quality filters and fluids matched to your vehicle's needs.</p>
+              </div>
+              <div class="service-item">
+                <h4 class="service-name">Filter &amp; Fluid Service</h4>
+                <p class="service-desc">Routine filter replacements and fluid checks that support long-term engine and system health.</p>
+              </div>
+              <div class="service-item">
+                <h4 class="service-name">Auto Repair</h4>
+                <p class="service-desc">General automotive repair for all makes and models with honest recommendations and quality workmanship.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- TYRE & ALIGNMENT -->
+          <div class="service-category reveal reveal-delay-2">
+            <div class="category-header" onclick="toggleServiceCategory(this)" style="cursor: pointer;">
+              <div class="category-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19 12h2M3 12h2M12 3v2m0 14v2m5.66-13.66l1.41 1.41M4.93 19.07l1.41-1.41m11.32 0l1.41 1.41M4.93 4.93l1.41 1.41"/></svg>
+              </div>
+              <h3 class="category-title">Tyre &amp; Alignment</h3>
+              <div class="category-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </div>
+            <div class="services-list" style="display: none;">
+              <div class="service-item">
+                <h4 class="service-name">Tire Services</h4>
+                <p class="service-desc">Tire inspections, replacement recommendations, and dependable service for safer driving in every season.</p>
+              </div>
+              <div class="service-item">
+                <h4 class="service-name">Tire Rotation &amp; Balancing</h4>
+                <p class="service-desc">Even tread wear and smoother handling with routine tire rotation and balancing services.</p>
+              </div>
+              <div class="service-item">
+                <h4 class="service-name">Wheel Alignment</h4>
+                <p class="service-desc">Precision alignment service to improve steering response and extend tire life.</p>
+              </div>
+              <div class="service-item">
+                <h4 class="service-name">Flat Tire Repair &amp; Replacement</h4>
+                <p class="service-desc">Quick diagnosis and repair or replacement options to get you back on the road with confidence.</p>
+              </div>
+            </div>
+          </div>
           
           <!-- ENGINE & PERFORMANCE -->
-          <div class="service-category reveal">
+          <div class="service-category reveal reveal-delay-3">
             <div class="category-header" onclick="toggleServiceCategory(this)" style="cursor: pointer;">
               <div class="category-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
@@ -267,10 +356,6 @@
                 <h4 class="service-name">Shocks and Struts</h4>
                 <p class="service-desc">Shock and strut replacement for improved ride comfort and handling.</p>
               </div>
-              <div class="service-item">
-                <h4 class="service-name">Wheel Alignment</h4>
-                <p class="service-desc">Precision wheel alignment for tire longevity and optimal handling.</p>
-              </div>
             </div>
           </div>
 
@@ -332,37 +417,6 @@
               <div class="service-item">
                 <h4 class="service-name">Timing Belt Replacement</h4>
                 <p class="service-desc">Timing belt and chain replacement to prevent engine damage.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- MAINTENANCE & GENERAL SERVICES -->
-          <div class="service-category reveal reveal-delay-8">
-            <div class="category-header" onclick="toggleServiceCategory(this)" style="cursor: pointer;">
-              <div class="category-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v6m4.22-13.22l4.24 4.24M1.54 1.54l4.24 4.24M20.46 20.46l-4.24-4.24M1.54 20.46l4.24-4.24"/></svg>
-              </div>
-              <h3 class="category-title">Maintenance & General Services</h3>
-              <div class="category-toggle">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
-            </div>
-            <div class="services-list" style="display: none;">
-              <div class="service-item">
-                <h4 class="service-name">General Auto Maintenance</h4>
-                <p class="service-desc">Complete maintenance services to keep your vehicle running smoothly.</p>
-              </div>
-              <div class="service-item">
-                <h4 class="service-name">Oil Change</h4>
-                <p class="service-desc">Professional oil change service with quality filters and fluids.</p>
-              </div>
-              <div class="service-item">
-                <h4 class="service-name">Tire Services</h4>
-                <p class="service-desc">Tire rotation, balancing, repair, and replacement services.</p>
-              </div>
-              <div class="service-item">
-                <h4 class="service-name">Auto Repair</h4>
-                <p class="service-desc">General automotive repair for all makes and models.</p>
               </div>
             </div>
           </div>
