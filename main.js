@@ -684,7 +684,7 @@ function initNvidiaChatbot() {
 
         // Intelligent Local Fallback Logic
         if (input.includes('hour') || input.includes('open') || input.includes('close')) {
-          response = "Norwood Gulf Auto Care is open Monday through Friday from 7:00 AM to 6:00 PM, and Saturdays from 7:00 AM to 3:00 PM. We are closed for service on Sundays, although our fuel station and C-store remain open from 6:00 AM to 9:30 PM Monday through Saturday, and 8:00 AM to 8:00 PM on Sundays.";
+          response = "Norwood Gulf is open Monday through Friday from 7:00 AM to 6:00 PM, and Saturdays from 7:00 AM to 3:00 PM. Service and state inspections are closed on Sundays, although our fuel station and C-store remain open from 6:00 AM to 9:30 PM Monday through Saturday, and 8:00 AM to 8:00 PM on Sundays.";
         } else if (input.includes('service') || input.includes('repair') || input.includes('fix')) {
           response = "We offer a wide range of services including engine diagnostics, brake repair, oil changes, transmission service, tire services, AC/climate control, and general maintenance. Which service are you interested in?";
         } else if (input.includes('location') || input.includes('address') || input.includes('where')) {
@@ -738,7 +738,7 @@ function initNvidiaChatbot() {
       let response = "";
       
       if (input.includes('hour') || input.includes('open') || input.includes('close')) {
-        response = "Norwood Gulf Auto Care is open Monday through Friday from 7:00 AM to 6:00 PM, and Saturdays from 7:00 AM to 3:00 PM. Service is closed on Sundays, but our gas station is open 6:00 AM - 9:30 PM Mon-Sat and 8:00 AM - 8:00 PM Sun.";
+        response = "Norwood Gulf is open Monday through Friday from 7:00 AM to 6:00 PM, and Saturdays from 7:00 AM to 3:00 PM. Service and state inspections are closed on Sundays, but our gas station is open 6:00 AM - 9:30 PM Mon-Sat and 8:00 AM - 8:00 PM Sun.";
       } else if (input.includes('service') || input.includes('repair') || input.includes('fix')) {
         response = "We provide expert engine diagnostics, brake repair, oil changes, transmission service, tire services, and more. How can we help you today?";
       } else if (input.includes('location') || input.includes('address') || input.includes('where')) {
