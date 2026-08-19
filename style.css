@@ -1720,7 +1720,8 @@ button, input, textarea, select {
 
 .footer-legal a {
   font-size: 0.8rem;
-  color: var(--muted-dark);
+  color: var(--primary-orange);
+  font-weight: 600;
   transition: color var(--ease);
 }
 
